@@ -3,7 +3,6 @@ import cookieParser from "cookie-parser";
 import express from "express";
 import rateLimit from "express-rate-limit";
 import helmet from "helmet";
-import { allowedOrigins, env } from "./config/env.js";
 import authRoutes from "./routes/auth.routes.js";
 
 export const app = express();
