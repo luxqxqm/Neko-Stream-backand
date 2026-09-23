@@ -21,4 +21,7 @@ if (!parsed.success) {
 }
 
 export const env = parsed.data;
-export const allowedOrigins = env.CLIENT_ORIGIN.split(',').map((origin) => origin.trim());
+export const allowedOrigins = [
+  ...env.CLIENT_ORIGIN.split(',').map((origin) => origin.trim()),
+  'https://neko-stream-rho.vercel.app',
+];
